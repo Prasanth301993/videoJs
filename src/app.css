@@ -1,3 +1,18 @@
+.video-react > .video-react-control-bar {
+    background-color: transparent;
+    margin: 0 2em;
+    width: calc(100% - 4em);
+}
+
+.video-react > .video-react-custom-progress-control {
+    position: absolute;
+    bottom: 3.7em;
+    width: 96%;
+    left: 2%;
+    height: 1.5em;
+    z-index: 1
+}
+
 .video-react-custom-progress-control .video-react-load-progress, .video-react-load-progress > div {
     border-radius: 25px;
     background: #fff !important;
@@ -6,13 +21,14 @@
 .video-react-custom-progress-control .video-react-play-progress {
     border-radius: 25px;
     background: transparent linear-gradient(180deg, #FF3B58 0%, #F92C95 100%) 0% 0% no-repeat padding-box;
-    margin: 0.5px !important;
+    margin: 0.75px !important;
 }
 
 .video-react-custom-progress-control .video-react-progress-holder {
     font-size: 1.6666666667em;
     background: #fff !important;
-    height: calc(0.3em + 1px)
+    height: calc(0.3em + 1.5px);
+    border-radius: 25px;
 }
 
 .video-react-custom-progress-control .video-react-play-progress::before {

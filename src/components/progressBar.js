@@ -24,11 +24,6 @@ export default class ProgressControl extends Component {
         this.handleMouseMoveThrottle = this.handleMouseMove.bind(this);
     }
 
-    componentDidMount = () => {
-        let slider = this.seekBar.slider.slider
-        slider.style.borderRadius = "25px";
-    }
-
     handleMouseMove(event) {
         if (!event.pageX) {
             return;
@@ -57,7 +52,6 @@ export default class ProgressControl extends Component {
                     'video-react-progress-control video-react-control video-react-custom-progress-control',
                     className
                 )}
-                style={{ position: "absolute", bottom: "3.1em", width: "96%", left: "2%", height: "1.5em", zIndex: 1 }}
             >
                 <SeekBar
                     mouseTime={this.state.mouseTime}
