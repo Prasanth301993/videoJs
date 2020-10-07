@@ -1,7 +1,5 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import forward from '../images/forward.svg'
-import backward from '../images/backward.svg'
 import {ReactComponent as Forward} from '../images/forward.svg';
 import {ReactComponent as Reverse} from '../images/backward.svg';
 import classNames from 'classnames';
