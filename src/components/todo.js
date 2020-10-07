@@ -10,20 +10,22 @@ const propTypes = {
   className: PropTypes.string
 };
 
-export default class FavButton extends Component {
+export default class Todo extends Component {
   constructor(props, context) {
     super(props, context);
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {}
+  handleClick() {
+    alert("")
+  }
 
   render() {
     const { player, className } = this.props;
     const { currentSrc } = player;
 
     return (
-        <div
+      <div
         ref={c => {
           this.button = c;
         }}
@@ -32,17 +34,18 @@ export default class FavButton extends Component {
           'video-react-button': true
         })}
         style={{
-          backgroundImage:
-            `url(${image})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center'
-        }}
+          width: "10%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }
+        }
         onClick={this.handleClick}
       >
-        
-      </div>
+        + Add To Do
+      </div >
     );
   }
 }
 
-FavButton.propTypes = propTypes;
+Todo.propTypes = propTypes;

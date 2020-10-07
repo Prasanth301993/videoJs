@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import image from '../images/fav.svg'
+import image from '../images/share.svg'
 
 
 
@@ -10,20 +10,22 @@ const propTypes = {
   className: PropTypes.string
 };
 
-export default class FavButton extends Component {
+export default class Share extends Component {
   constructor(props, context) {
     super(props, context);
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {}
+  handleClick() { 
+    alert("")
+  }
 
   render() {
     const { player, className } = this.props;
     const { currentSrc } = player;
 
     return (
-        <div
+      <div
         ref={c => {
           this.button = c;
         }}
@@ -35,7 +37,7 @@ export default class FavButton extends Component {
           backgroundImage:
             `url(${image})`,
           backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center'
+          backgroundPosition: 'center'          
         }}
         onClick={this.handleClick}
       >
@@ -45,4 +47,4 @@ export default class FavButton extends Component {
   }
 }
 
-FavButton.propTypes = propTypes;
+Share.propTypes = propTypes;
