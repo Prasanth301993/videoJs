@@ -5,6 +5,8 @@ import Todo from './components/todo';
 import 'video-react/dist/video-react.css';
 import Share from './components/share';
 import Completed from './components/completed';
+import ProgressControl from './components/progressBar';
+import './app.css'
 
 export default props => {
     return (
@@ -17,6 +19,7 @@ export default props => {
                 <Todo order={10} />
                 <FullscreenToggle order={11} />
             </ControlBar>
+            <ProgressControl />
         </Player>
     );
 };
