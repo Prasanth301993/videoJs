@@ -1,5 +1,5 @@
 import React from 'react';
-import { Player, ControlBar, FullscreenToggle, BigPlayButton, PlayToggle,CurrentTimeDisplay,TimeDivider,DurationDisplay,VolumeMenuButton } from 'video-react';
+import { Player, ControlBar, FullscreenToggle, BigPlayButton,CurrentTimeDisplay,TimeDivider,DurationDisplay } from 'video-react';
 import FavButton from './components/favButton';
 import Todo from './components/todo';
 import 'video-react/dist/video-react.css';
@@ -7,8 +7,10 @@ import Share from './components/share';
 import Completed from './components/completed';
 import ForwardReplayControl from "./components/forwardReverse";
 import ProgressControl from './components/progressBar';
+import PlayToggle from "./components/playToggle";
 import './app.css'
 import CustomSpacer from './components/customSpacer';
+import VolumeMenuButton from "./components/volumeMenuButton"
 
 export default class Video extends React.Component {
     componentDidMount() {
@@ -23,7 +25,7 @@ export default class Video extends React.Component {
                     <PlayToggle order={1} />
                     <ForwardReplayControl order={3.1} mode={"backward"} />
                     <ForwardReplayControl order={3.2} mode={"forward"} />
-                    <VolumeMenuButton key="volume-menu-button" order={4} />
+                    <VolumeMenuButton key="volume-menu-button" order={4} vertical />
                     <CurrentTimeDisplay key="current-time-display" order={5.1} />
                     <TimeDivider key="time-divider" order={5.2} />
                     <DurationDisplay key="duration-display" order={5.3} />
