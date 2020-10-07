@@ -1,0 +1,91 @@
+.vjs-custom-button > .vjs-seek-button.skip-back , .vjs-custom-button > .vjs-seek-button.skip-forward {
+  font-size: 2em;
+  height: 2em;
+  width: 2em;
+  margin: 1em;
+}
+
+.vjs-custom-button > .vjs-seek-button.skip-back::before , .vjs-custom-button > .vjs-seek-button.skip-forward::before, .vjs-custom-button > .vjs-seek-button.skip-back .vjs-icon-placeholder::before, .vjs-custom-button > .vjs-seek-button.skip-forward .vjs-icon-placeholder::before {
+  line-height: 1 !important;
+}
+
+.vjs-custom-button > .vjs-play-control {
+  font-size: 4em !important;
+  height: 2em !important;
+  width: 2em !important;
+}
+
+.vjs-custom-button > .vjs-play-control::before, .vjs-custom-button > .vjs-play-control .vjs-icon-placeholder::before {
+  line-height: 1 !important;
+  content: "\f102" !important
+}
+
+.vjs-custom-button {
+  height: max-content !important;
+  position: absolute !important;
+  width: max-content !important;
+  min-width: 24em !important;
+  left: 50%;
+  margin-left: -12em !important;
+  top: 50%;
+  margin-top: -5em !important;
+}
+
+.vjs-big-play-button {
+  display: none !important;
+}
+
+.fa.fa-heart {
+  color: #f54042;
+}
+
+.fa.fa-heart-o:before {
+  content: "\f08a";
+  font-family: FontAwesome;  
+  font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+
+}
+.fa.fa-heart:before {
+  content: "\f004";
+  font-family: FontAwesome;
+  font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+
+}
+
+.fa.fa-check:before {
+  content: "\f058";
+  font-family: FontAwesome;
+  color: #2DCE8C;
+  font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+
+
+}
+
+.fa.fa-check-o:before {
+  content: "\f10c";
+  font-family: FontAwesome; 
+  font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+
+}
+.fa.fa-share-alt:before {
+  content: "\f045";
+  font-family: FontAwesome; 
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+}
+
+
+.video-js .vjs-duration, .vjs-no-flex .vjs-duration,.video-js .vjs-duration, .vjs-time-divider ,.video-js .vjs-current-time, .vjs-no-flex .vjs-current-time
+ {
+display: block !important;
+}
+
