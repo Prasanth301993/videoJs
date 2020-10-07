@@ -17,7 +17,7 @@ export default class Todo extends Component {
   }
 
   handleClick() {
-    alert("")
+    alert("todo")
   }
 
   render() {
@@ -25,7 +25,7 @@ export default class Todo extends Component {
     const { currentSrc } = player;
 
     return (
-      <div
+      <button
         ref={c => {
           this.button = c;
         }}
@@ -43,7 +43,7 @@ export default class Todo extends Component {
         onClick={this.handleClick}
       >
         + Add To Do
-      </div >
+      </button >
     );
   }
 }

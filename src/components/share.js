@@ -17,7 +17,7 @@ export default class Share extends Component {
   }
 
   handleClick() { 
-    alert("")
+    alert("share")
   }
 
   render() {
@@ -25,7 +25,7 @@ export default class Share extends Component {
     const { currentSrc } = player;
 
     return (
-      <div
+      <button
         ref={c => {
           this.button = c;
         }}
@@ -42,7 +42,7 @@ export default class Share extends Component {
         onClick={this.handleClick}
       >
         
-      </div>
+      </button>
     );
   }
 }

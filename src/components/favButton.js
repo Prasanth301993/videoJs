@@ -16,14 +16,16 @@ export default class FavButton extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {}
+  handleClick() {
+      alert("fav")
+  }
 
   render() {
     const { player, className } = this.props;
     const { currentSrc } = player;
 
     return (
-        <div
+        <button
         ref={c => {
           this.button = c;
         }}
@@ -40,7 +42,7 @@ export default class FavButton extends Component {
         onClick={this.handleClick}
       >
         
-      </div>
+      </button>
     );
   }
 }

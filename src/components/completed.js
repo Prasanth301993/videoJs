@@ -5,6 +5,7 @@ import image from '../images/completed.svg'
 
 
 
+
 const propTypes = {
   player: PropTypes.object,
   className: PropTypes.string
@@ -17,7 +18,7 @@ export default class Completed extends Component {
   }
 
   handleClick() { 
-    alert("")
+    alert("completed")
   }
 
   render() {
@@ -25,7 +26,7 @@ export default class Completed extends Component {
     const { currentSrc } = player;
 
     return (
-      <div
+      <button
         ref={c => {
           this.button = c;
         }}
@@ -42,7 +43,7 @@ export default class Completed extends Component {
         onClick={this.handleClick}
       >
         
-      </div>
+      </button>
     );
   }
 }
