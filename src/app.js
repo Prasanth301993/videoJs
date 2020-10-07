@@ -6,6 +6,8 @@ import 'video-react/dist/video-react.css';
 import Share from './components/share';
 import Completed from './components/completed';
 import ForwardReplayControl from "./components/forwardReverse";
+import ProgressControl from './components/progressBar';
+import './app.css'
 
 export default class Video extends React.Component {
     componentDidMount() {
@@ -25,6 +27,7 @@ export default class Video extends React.Component {
                     <Todo order={10} />
                     <FullscreenToggle order={11} />
                 </ControlBar>
+                <ProgressControl />
             </Player>
         );
     }

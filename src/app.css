@@ -1,0 +1,12 @@
+.video-react-custom-progress-control .video-react-load-progress, .video-react-load-progress > div {
+    border-radius: 25px;
+}
+
+.video-react-custom-progress-control .video-react-play-progress {
+    border-radius: 25px;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(84,169,247,1) 45%, rgba(60,128,221,1) 100%);;
+}
+
+.video-react-custom-progress-control .video-react-progress-holder {
+    font-size: 1.6666666667em;
+}
