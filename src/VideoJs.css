@@ -89,3 +89,13 @@
 display: block !important;
 }
 
+.vjs-progress-control.vjs-control {
+  position: absolute !important;
+  left: 1.5%;
+  width: 97% !important;
+  transform: translate(0px, -3em);
+}
+
+.vjs-control-bar {
+  background-color: transparent !important;
+}

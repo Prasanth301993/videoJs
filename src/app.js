@@ -8,6 +8,14 @@ export default class VideoApp extends React.Component {
         isFav: this.props.isFav || false
     }
 
+    checkFav = () => {
+        this.setState({
+            "isFav": !this.state.isFav
+        }, () => {
+            console.log(this.state)
+        })
+    }
+
     render() {
 
 
@@ -30,13 +38,28 @@ export default class VideoApp extends React.Component {
             isFav: this.state.isFav,
             controlBar: {
                 children: [
-                        'playToggle',
-                        'volumePanel',
-                        'currentTimeDisplay',
-                        'timeDivider',
-                        'durationDisplay',
-                        'progressControl',                          
-                        'fullscreenToggle']
+                    'playToggle',
+                    'volumePanel',
+                    'currentTimeDisplay',
+                    'timeDivider',
+                    'durationDisplay',
+                    'progressControl',
+                    {
+                        name: 'toDo',
+                        text: '+To Do',
+                        isFav: this.state.isFav,
+                        style: { lineHeight: "3em", height: "100%", cursor: "pointer", margin: "0 1 em" },
+                        callback: this.checkFav
+                    },
+                    {
+                        name: 'Favorite',
+                        text: '+To Do',
+                        isFav: this.state.isFav,
+                        style: { lineHeight: "3em", height: "100%", cursor: "pointer", width: "4em", display: "flex", justifyContent: "center", alignItems: "center" },
+                        callback: this.checkFav
+                    },
+                    'fullscreenToggle'
+                ]
             },
         }
 
