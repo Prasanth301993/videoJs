@@ -99,3 +99,34 @@ display: block !important;
 .vjs-control-bar {
   background-color: transparent !important;
 }
+
+.vjs-progress-holder {
+  font-size: 1.77777em;
+}
+
+
+.vjs-load-progress, .vjs-load-progress > div {
+  border-radius: 25px;
+  background: #fff !important;
+  width: calc(100% + .04em) !important;
+}
+
+.vjs-play-progress {
+  border-radius: 25px;
+  background: transparent linear-gradient(180deg, #FF3B58 0%, #F92C95 100%) 0% 0% no-repeat padding-box;
+  margin: 0.75px !important;
+  height: 0.3em !important;
+}
+
+.vjs-progress-holder {
+  font-size: 1.6666666667em;
+  height: calc(0.3em + 1.5px) !important;
+  background: #fff !important;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.vjs-play-progress::before {
+  content: "" !important
+}
