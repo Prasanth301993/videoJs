@@ -91,9 +91,9 @@ display: block !important;
 
 .vjs-progress-control.vjs-control {
   position: absolute !important;
-  left: 1.5%;
-  width: 97% !important;
-  transform: translate(0px, -3em);
+  left: 0.5%;
+  width: 99% !important;
+  transform: translate(0px, -2.5em);
 }
 
 .vjs-control-bar {
@@ -103,7 +103,9 @@ display: block !important;
 .vjs-progress-holder {
   font-size: 1.77777em;
 }
-
+.vjs-load-progress{
+height: 0.7em !important;
+}
 
 .vjs-load-progress, .vjs-load-progress > div {
   border-radius: 25px;
@@ -115,7 +117,7 @@ display: block !important;
   border-radius: 25px;
   background: transparent linear-gradient(180deg, #FF3B58 0%, #F92C95 100%) 0% 0% no-repeat padding-box;
   margin: 0.75px !important;
-  height: 0.3em !important;
+  height: 0.6em !important;
 }
 
 .vjs-progress-holder {
@@ -135,4 +137,24 @@ display: block !important;
   display: block !important;
   width:100%;
   min-width: 4em;
+}
+
+
+.video-js .vjs-overlay-no-background {
+  max-width: unset !important;
+}
+
+.rewind-play-forward{
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;  
+  margin: auto !important;
+  transform: translate(-50%, -50%);
+}
+
+.mobile-rewind-play-forward{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33.3%;
 }

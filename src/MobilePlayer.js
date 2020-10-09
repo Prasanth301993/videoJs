@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDomServer from 'react-dom/server'
 import videojs from 'video.js'
 import './VideoJs.css'
 import 'videojs-seek-buttons/dist/videojs-seek-buttons.css';
@@ -9,7 +10,7 @@ import mobilePlayControl from './components/mobilePlayControl';
 
 require('videojs-seek-buttons');
 
-export default class VideoPlayer extends React.Component {
+export default class MobilePlayer extends React.Component {
 
   state = {
     refresh: false
@@ -20,8 +21,6 @@ export default class VideoPlayer extends React.Component {
 
     this.initializePlayer(this.props)
 
-
-
   }
 
 
@@ -31,32 +30,6 @@ export default class VideoPlayer extends React.Component {
     this.player = videojs(this.videoNode, props, function onPlayerReady() {
       console.log('onPlayerReady', this);
     });
-    let overlay_content = '<div class="myOverlay"><h2>Why do we crave cabs for night?</h2></div>';
-    this.player.overlay({
-      overlays: [{
-        start: 'loadstart',
-        content: overlay_content,
-        showBackground: false,
-        end: 'playing',
-        align: 'top-left'
-      },
-      {
-        start: 'pause',
-        content: overlay_content,
-        showBackground: false,
-        end: 'playing',
-        align: 'top-left'
-      },
-      {
-        start: 'mouseover',
-        content: overlay_content,
-        showBackground: false,
-        end: 'mouseout',
-        align: 'top-left'
-      }
-      ]
-    });  
-    
   }
 
   
@@ -77,7 +50,7 @@ export default class VideoPlayer extends React.Component {
 
     return (
       <div data-vjs-player ref={node => this.mainNode = node}>
-        <video ref={node => this.videoNode = node} className="video-js vjs-default-skin breathe">
+        <video ref={node => this.videoNode = node} className="video-js vjs-default-skin breathe mobile">
         </video>
       </div>
     )

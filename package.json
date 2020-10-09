@@ -4,12 +4,13 @@
   "description": "",
   "keywords": [],
   "main": "src/index.js",
-  "dependencies": {
+  "dependencies": {   
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-scripts": "3.4.3",
     "video-react": "^0.14.1",
     "video.js": "7.8.4",
+    "videojs-overlay": "^2.1.4",
     "videojs-plus": "1.6.2",
     "videojs-seek-buttons": "^1.6.0",
     "videojs-settings-menu": "0.0.1"
