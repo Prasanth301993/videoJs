@@ -2,8 +2,7 @@ import React from 'react';
 import videojs from 'video.js'
 import './VideoJs.css'
 import 'videojs-seek-buttons/dist/videojs-seek-buttons.css';
-import toDo from './components/toDo';
-import Favorite from './components/Favorite';
+import DynComp from './components/dynComp';
 
 require('videojs-seek-buttons');
 
@@ -13,41 +12,23 @@ export default class VideoPlayer extends React.Component {
     refresh: false
   }
 
-  componentDidMount() {
-    console.log(this)
-    let that = this;
-
+  componentDidMount() {   
+    this.initializePlayer(this.props)
+  }
+  
+  initializePlayer(props){    
     // instantiate Video.js
-    this.player = videojs(this.videoNode, this.props, function onPlayerReady() {
+    this.player = videojs(this.videoNode, props, function onPlayerReady() {
       console.log('onPlayerReady', this);
-
     });
-
-    // this.player.getChild('controlBar').addChild('toDo', { style: { lineHeight: "3em", height: "100%", cursor: "pointer" }, text: "+To Do", callback: function(){ console.log("test ") } });
-    
-    let seekTime = (seek, skipBy) => {
-      if (seek) {
-        if (seek == "forward") {
-          this.player.currentTime(this.player.currentTime() + skipBy);
-        } else {
-          this.player.currentTime(this.player.currentTime() - skipBy);
-        }
-      } else {
-        this.player.play()
-      }
-    }
-
-    this.player.on('pause', function () {
-
-
-    });
-
-    this.player.on('play', function () {
-
-    });
-
   }
 
+  componentWillReceiveProps(nextProps){
+    console.log(this.player)
+    debugger
+    this.player.options(nextProps);
+  }
+  
   // destroy player on unmount
   componentWillUnmount() {
     console.log(this.props)
@@ -64,7 +45,7 @@ export default class VideoPlayer extends React.Component {
     console.log(this.props)
     return (
       <div data-vjs-player ref={node => this.mainNode = node}>
-        <video ref={node => this.videoNode = node} className="video-js vjs-default-skin">
+        <video ref={node => this.videoNode = node} className="video-js vjs-default-skin breathe">
         </video>
       </div>
     )

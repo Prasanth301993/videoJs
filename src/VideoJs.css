@@ -130,3 +130,9 @@ display: block !important;
 .vjs-play-progress::before {
   content: "" !important
 }
+
+.video-js .vjs-custom-control-spacer{
+  display: block !important;
+  width:100%;
+  min-width: 4em;
+}
