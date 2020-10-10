@@ -48,7 +48,7 @@ export default class VideoApp extends React.Component {
 
 
         const videoJsOptions = {
-            autoplay: false,
+            autoplay: true,
             responsive: true,
             breakpoints: {
                 medium: 500,
@@ -59,7 +59,7 @@ export default class VideoApp extends React.Component {
             fluid: false,
             controls: true,
             sources: [{
-                src: 'https://static.videezy.com/system/resources/previews/000/037/344/original/21Run01.mp4',
+                src: 'https://vjs.zencdn.net/v/oceans.mp4',
                 type: 'video/mp4'
             }],
             fill: true,
@@ -206,7 +206,7 @@ export default class VideoApp extends React.Component {
         return (
             <div style={{ width: "100%" }}>
                 <VideoPlayer ref={(e) => this.player = e} {...videoJsOptions} />
-                <MobilePlayer ref={(e) => this.player = e} {...videoJsMobileOptions} />
+                {/* <MobilePlayer ref={(e) => this.player = e} {...videoJsMobileOptions} /> */}
             </div>
         )
     }
