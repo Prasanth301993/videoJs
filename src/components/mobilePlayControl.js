@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import videojs from 'video.js';
-import { ReactComponent as Forward } from '../images/forward.svg';
-import { ReactComponent as Reverse } from '../images/backward.svg';
-import { ReactComponent as Play } from '../images/play.svg';
-import { ReactComponent as Pause } from '../images/pause.svg';
+import { ReactComponent as Forward } from '../images/mobile-forward.svg';
+import { ReactComponent as Reverse } from '../images/mobile-backward.svg';
+import { ReactComponent as Play } from '../images/mobile-play.svg';
+import { ReactComponent as Pause } from '../images/mobile-pause.svg';
 
 const vjsComponent = videojs.getComponent('Component');
 
@@ -34,9 +34,17 @@ class Content extends React.Component {
         player.on('mouseout', function () {
             that.setState({enable:false})
         })
+        
         player.on('mouseover', function () {
             that.setState({enable:true})
         })
+        
+        player.on('touchstart', function() {
+            if (!that.state.play) {
+                that.setState({enable:true,play:false})
+            }
+            
+          });
     }
 
     Event = (mode) => {

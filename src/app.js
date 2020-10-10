@@ -135,6 +135,7 @@ export default class VideoApp extends React.Component {
 
         }
         const videoJsMobileOptions = {
+            enableTouchActivity:true,
             autoplay: false,
             responsive: true,
             breakpoints: {
