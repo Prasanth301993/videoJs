@@ -31,7 +31,7 @@ export default class VideoPlayer extends React.Component {
     this.player = videojs(this.videoNode, props, function onPlayerReady() {
       console.log('onPlayerReady', this);
     });
-    let overlay_content = '<div class="myOverlay"><h2>Why do we crave cabs for night?</h2></div>';
+    let overlay_content = '<div class="myOverlay"><h2 style="padding:10px">Why do we crave cabs for night?</h2></div>';
     this.player.overlay({
       overlays: [{
         start: 'loadstart',
