@@ -98,6 +98,9 @@ display: block !important;
 
 .vjs-control-bar {
   background-color: transparent !important;
+  padding: 0 1.5em;
+  margin-bottom: 0.3em;
+
 }
 
 .vjs-progress-holder {
@@ -157,4 +160,14 @@ height: 0.7em !important;
     align-items: center;
     justify-content: center;
     width: 33.3%;
+}
+
+.video-js {
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: transparent !important;
+}
+
+.video-js > video {
+  outline: none;
 }
