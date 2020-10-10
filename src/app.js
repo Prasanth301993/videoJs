@@ -153,7 +153,7 @@ export default class VideoApp extends React.Component {
             isFav: this.state.isFav,
             mobilePlayControl: {
                 name: 'mobilePlayControl',
-                text: 'Add To do+',
+                text: 'To do+',
                 selected: false,
                 className: ["rewind-play-forward"],
                 style: { display: "flex", width: "15em", justifyContent: "center", alignItems: "center" }                
@@ -189,7 +189,7 @@ export default class VideoApp extends React.Component {
                     },
                     {
                         name: 'DynComp',
-                        text: 'Add To do+',
+                        text: 'To do+',
                         selected: false,
                         className: ["vjs-control", "vjs-button"],
                         style: { lineHeight: "3em", height: "100%", cursor: "pointer", width: "6em", display: "flex", justifyContent: "center", alignItems: "center" },

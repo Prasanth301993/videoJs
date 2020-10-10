@@ -32,8 +32,10 @@ export default class VideoPlayer extends React.Component {
       console.log('onPlayerReady', this);
     });
     let overlay_content = '<div class="myOverlay"><h2>Why do we crave cabs for night?</h2></div>';
+    let find='<div class="myOverlay"><div class="ytp-gradient-bottom" data-layer="8" style="height: 124px; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAB8CAYAAACoqdqWAAAA30lEQVQoU2XIV0cFAACG4dPenfYep733nqe9SySRJJJIEkkkiSSSRBJJIon0I/PcnJu+i8frCwT+LcoTjRjEIg7xSEAikpCMFKQiDekIIgOZyEI2cpCLPOSjAIUoilCsSlCKMpQjhApUogrVqEEt6lCPBjSiCc1oQSva0I4OdKIrQrfqQS/60I8BDGIIwxjBKMIYwzgmMIkpTGMGs5jDPBawiCUsYwWrWMM6NrCJLWxjB7vYwz4OcIgjHOMEpzjDOS5wiStc4wa3uMM9HvCIJzzjBa94wzs+8IkvfOMHv39IIyCLuuKCTAAAAABJRU5ErkJggg==&quot;);"></div></div>'
     this.player.overlay({
-      overlays: [{
+      overlays: [
+        {
         start: 'loadstart',
         content: overlay_content,
         showBackground: false,
@@ -53,9 +55,33 @@ export default class VideoPlayer extends React.Component {
         showBackground: false,
         end: 'mouseout',
         align: 'top-left'
+      },
+      {
+        start: 'loadstart',
+        content: find,
+        showBackground: false,
+        end: 'playing',
+        align: 'top-left',
+        class:"ytp-gradient"
+      },
+      {
+        start: 'pause',
+        content: find,
+        showBackground: false,
+        end: 'playing',
+        align: 'top-left',
+        class:"ytp-gradient"
+      },
+      {
+        start: 'mouseover',
+        content: find,
+        showBackground: false,
+        end: 'mouseout',
+        align: 'top-left',
+        class:"ytp-gradient"
       }
       ]
-    });  
+    }); 
     
   }
 
