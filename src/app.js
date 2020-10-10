@@ -135,6 +135,7 @@ export default class VideoApp extends React.Component {
 
         }
         const videoJsMobileOptions = {
+            enableTouchActivity:true,
             autoplay: false,
             responsive: true,
             breakpoints: {
@@ -205,7 +206,7 @@ export default class VideoApp extends React.Component {
 
         return (
             <div style={{ width: "100%" }}>
-                <VideoPlayer ref={(e) => this.player = e} {...videoJsOptions} />
+                {/* <VideoPlayer ref={(e) => this.player = e} {...videoJsOptions} /> */}
                 <MobilePlayer ref={(e) => this.player = e} {...videoJsMobileOptions} />
             </div>
         )
