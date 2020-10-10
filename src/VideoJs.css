@@ -174,3 +174,7 @@ height: 0.7em !important;
 .vjs-load-progress > div {
   display: none !important;
 }
+.vjs-button > .vjs-icon-placeholder:before {
+  font-size: 3em !important;
+  line-height: 1 !important;
+}

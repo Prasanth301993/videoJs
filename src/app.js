@@ -3,14 +3,13 @@ import ReactDOM from 'react-dom';
 import VideoPlayer from './VideoPlayer'
 import MobilePlayer from "./MobilePlayer";
 import 'video.js/dist/video-js.css'
-import { ReactComponent as Fav } from './images/fav.svg';
-import { ReactComponent as UnFav } from './images/fav-full.svg';
-import { ReactComponent as Share } from './images/share.svg';
-import { ReactComponent as Completed } from './images/completed.svg';
-import { ReactComponent as Forward } from './images/forward.svg';
-import { ReactComponent as Reverse } from './images/backward.svg';
-import { ReactComponent as Play } from './images/play.svg';
-import { ReactComponent as Pause } from './images/pause.svg';
+import Forward from "./images/videoIcons/videoIcons/fastForward";
+import Fav from "./images/videoIcons/videoIcons/heart";
+import Reverse from "./images/videoIcons/videoIcons/rewind";
+import Play from "./images/videoIcons/videoIcons/play";
+import Pause from "./images/videoIcons/videoIcons/pause";
+import Share from "./images/videoIcons/videoIcons/share";
+import Completed from "./images/videoIcons/videoIcons/tick";
 
 export default class VideoApp extends React.Component {
 
@@ -34,13 +33,13 @@ export default class VideoApp extends React.Component {
         }
 
         player.on('play', function () {
-            ReactDOM.render(<Pause width={15} />, document.querySelector(".breathe .vjs-play-control"));
+            ReactDOM.render(<Pause size={"1em"} />, document.querySelector(".breathe .vjs-play-control"));
         });
         player.on('ended', function () {
-            ReactDOM.render(<Play width={15} />, document.querySelector(".breathe .vjs-play-control"));
+            ReactDOM.render(<Play size={"0.5em"} />, document.querySelector(".breathe .vjs-play-control"));
         })
         player.on('pause', function () {
-            ReactDOM.render(<Play width={15} />, document.querySelector(".breathe .vjs-play-control"));
+            ReactDOM.render(<Play size={"0.5em"} />, document.querySelector(".breathe .vjs-play-control"));
         })
     }
 
@@ -72,7 +71,7 @@ export default class VideoApp extends React.Component {
                         text: 'Reverse',
                         selected: true,
                         className: ["vjs-control", "vjs-button"],
-                        icon: <Reverse width="16" />,
+                        icon: <Reverse size={"0.8em"} />,
                         style: { lineHeight: "3em", height: "100%", cursor: "pointer", width: "3em", display: "flex", justifyContent: "center", alignItems: "center" },
                         callback: () => { this.seekTime("rewind", 15) }
                     },
@@ -81,7 +80,7 @@ export default class VideoApp extends React.Component {
                         text: 'Forward',
                         selected: true,
                         className: ["vjs-control", "vjs-button"],
-                        icon: <Forward width="15" />,
+                        icon: <Forward size={"0.8em"} />,
                         style: { lineHeight: "3em", height: "100%", cursor: "pointer", width: "3em", display: "flex", justifyContent: "center", alignItems: "center" },
                         callback: () => { this.seekTime("forward", 15) }
                     },
@@ -99,7 +98,7 @@ export default class VideoApp extends React.Component {
                         text: 'Share',
                         selected: true,
                         className: ["vjs-control", "vjs-button"],
-                        icon: <Share />,
+                        icon: <Share size={"1.5em"}/>,
                         style: { lineHeight: "3em", height: "100%", cursor: "pointer", width: "4em", display: "flex", justifyContent: "center", alignItems: "center" },
                         callback: () => { alert("") }
                     },
@@ -108,7 +107,7 @@ export default class VideoApp extends React.Component {
                         text: 'Completed',
                         selected: true,
                         className: ["vjs-control", "vjs-button"],
-                        icon: <Completed />,
+                        icon: <Completed size={"1.8em"}/>,
                         style: { lineHeight: "3em", height: "100%", cursor: "pointer", width: "4em", display: "flex", justifyContent: "center", alignItems: "center" },
                         callback: () => { alert("") }
                     },
@@ -117,7 +116,7 @@ export default class VideoApp extends React.Component {
                         text: 'Favourite',
                         selected: true,
                         className: ["vjs-control", "vjs-button"],
-                        icon: this.state.isFav ? <Fav /> : <UnFav />,
+                        icon:  <Fav size={"0.8em"} filled={"white"}/>,
                         style: { lineHeight: "3em", height: "100%", cursor: "pointer", width: "4em", display: "flex", justifyContent: "center", alignItems: "center" },
                         callback: () => { this.setState({ isFav: !this.state.isFav }) }
                     },
@@ -174,7 +173,7 @@ export default class VideoApp extends React.Component {
                         text: 'Completed',
                         selected: true,
                         className: ["vjs-control", "vjs-button"],
-                        icon: <Completed />,
+                        icon: <Completed size={"1em"}/>,
                         style: { lineHeight: "3em", height: "100%", cursor: "pointer", width: "4em", display: "flex", justifyContent: "center", alignItems: "center" },
                         callback: () => { alert("") }
                     },
@@ -184,7 +183,7 @@ export default class VideoApp extends React.Component {
                         text: 'Favourite',
                         selected: true,
                         className: ["vjs-control", "vjs-button"],
-                        icon: this.state.isFav ? <Fav /> : <UnFav />,
+                        icon: <Fav /> ,
                         style: { lineHeight: "3em", height: "100%", cursor: "pointer", width: "4em", display: "flex", justifyContent: "center", alignItems: "center" },
                         callback: () => { this.setState({ isFav: !this.state.isFav }) }
                     },
