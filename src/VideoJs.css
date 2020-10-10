@@ -113,7 +113,7 @@ height: 0.7em !important;
 .vjs-load-progress, .vjs-load-progress > div {
   border-radius: 25px;
   background: #fff !important;
-  width: calc(100% + .04em) !important;
+  width: calc(100% + .15em) !important;
 }
 
 .vjs-play-progress {
@@ -165,9 +165,16 @@ height: 0.7em !important;
 .video-js {
   border-radius: 20px;
   overflow: hidden;
-  background-color: transparent !important;
 }
 
 .video-js > video {
   outline: none;
+}
+
+.vjs-load-progress > div {
+  display: none !important;
+}
+.vjs-button > .vjs-icon-placeholder:before {
+  font-size: 3em !important;
+  line-height: 1 !important;
 }
